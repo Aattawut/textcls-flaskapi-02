@@ -5,13 +5,16 @@
 import json
 import time
 from flask import Flask
+from flask_cors import CORS
 from flask_restful import Resource, Api, reqparse
 import requests
 import predict_sentiment as ps
 import pandas as pd
 
+
 app = Flask(__name__)
-api = Api(app)
+#api = Api(app)
+CORS(app)
 
 
 @app.route('/')
