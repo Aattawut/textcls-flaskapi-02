@@ -23,4 +23,4 @@ botnoi==0.2.9
 matplotlib
 gensim
 flask_cors
-Python-Levenshtein
+python-Levenshtein
