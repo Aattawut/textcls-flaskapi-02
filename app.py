@@ -13,8 +13,8 @@ import pandas as pd
 
 
 app = Flask(__name__)
-#api = Api(app)
-cors = CORS(app)
+CORS(app)
+api = Api(app)
 
 
 @app.route('/')
@@ -32,6 +32,6 @@ class get_sentiment(Resource):
         return res
 
 
-cors.add_resource(get_sentiment, '/get_sentiment', endpoint='get_sentiment')
+api.add_resource(get_sentiment, '/get_sentiment', endpoint='get_sentiment')
 if __name__ == '__main__':
     app.run(threaded=True)
