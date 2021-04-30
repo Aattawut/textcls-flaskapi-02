@@ -34,8 +34,7 @@ def trainmodel(modelFileName='sentiment.mod'):
     # create training set
     nlpdataset = pd.DataFrame()
     nlpdataset['feature'] = temp1 + temp2 + temp3 + headache0 + headache1
-    nlpdataset['label'] = ['0'] * 5 + ['1'] * \
-        5 + ['2'] * 5 + ['0']*5 + ['1']*5
+    nlpdataset['label'] = ['0']*5 + ['1']*5 + ['2']*5 + ['0']*5 + ['1']*5
     # train model
     clf = LinearSVC()
     mod = clf.fit(
