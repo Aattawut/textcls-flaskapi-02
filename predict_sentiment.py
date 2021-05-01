@@ -7,7 +7,6 @@ import pickle
 import pandas as pd
 from sklearn.svm import LinearSVC
 import numpy as np
-from flask import jsonify
 
 
 def trainmodel(modelFileName='sentiment.mod'):
