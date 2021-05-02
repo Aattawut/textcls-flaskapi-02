@@ -22,5 +22,6 @@ pythainlp
 xlrd
 matplotlib
 gensim
-flask-cors
+Flask Cors
 python-Levenshtein
+joblib

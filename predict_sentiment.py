@@ -7,6 +7,7 @@ import pickle
 import pandas as pd
 from sklearn.svm import LinearSVC
 import numpy as np
+import joblib
 
 
 def trainmodel(modelFileName='sentiment.mod'):
@@ -39,12 +40,14 @@ def trainmodel(modelFileName='sentiment.mod'):
     mod = clf.fit(
         np.vstack(nlpdataset['feature'].values), nlpdataset['label'].values)
     # save model
-    pickle.dump(mod, open(modelFileName, 'wb'))
+    #pickle.dump(mod, open(modelFileName, 'wb'))
+    joblib.dump(mod, modelFileName)
     return 'model created'
 
 
 # load model
-mod = pickle.load(open('sentiment.mod', 'rb'))
+#mod = pickle.load(open('sentiment.mod', 'rb'))
+mod = joblib.load('sentiment.mod')
 
 
 def get_sentiment(sen):
